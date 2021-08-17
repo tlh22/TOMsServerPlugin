@@ -23,7 +23,7 @@ class ServerExpressionPlugin:
         QgsMessageLog.logMessage('Loading expressions', 'ServerExpression', Qgis.Info)
         #QgsExpression.registerFunction(your_expression)
 
-        for func in exp.functions:
+        for func in exp.TOMsExpressions().functions:
             QgsMessageLog.logMessage("Considering function {}".format(func.name()), 'ServerExpression', Qgis.Info)
 
             if QgsExpression.registerFunction(func):
